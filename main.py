@@ -22,7 +22,7 @@ def writing_check(seconds, old_text):
         counter.config(text=f"")
         # text.config(state=DISABLED, bg="grey")
 
-    if old_text == new_text:
+    if old_text == new_text and new_text != "\n":
         seconds -= 1
         if -1 < seconds <= 5:
             counter.config(text=f"{seconds}")
